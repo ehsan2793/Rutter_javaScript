@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script
+      src="https://unpkg.com/@rutter/rutter-link@latest"
+      type="text/javascript"
+    ></script>
+    <script>
+      function loadRutter() {
+        Rutter.create({
+          publicKey: 'sandbox_pk_89dbc550-a4bf-45e4-807f-08dbec4d4f5a',
+          onSuccess: function (publicToken) {
+            console.log('public token: ' + publicToken);
+          },
+        }).open();
+      }
+    </script>
+    <script src="script.js"></script>
+    <button onclick="loadRutter()">Click me to open Rutter</button>
+  </body>
+</html>
